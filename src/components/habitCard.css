@@ -14,3 +14,7 @@ li {
 .habit-card h3 {
     cursor: pointer;
 }
+
+i {
+    padding: 0 10px ;
+}
