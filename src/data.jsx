@@ -5,7 +5,7 @@ export const habits = [
     repeat: "daily",
     goal: "30 minutes",
     time: "morning",
-    startDate: "18-06-2023",
+    startDate: "2023-06-18",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const habits = [
     repeat: "daily",
     goal: "1 hour",
     time: "evening",
-    startDate: "18-06-2023",
+    startDate: "2023-06-18",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const habits = [
     repeat: "daily",
     goal: "2 chapters",
     time: "morning",
-    startDate: "18-06-2023",
+    startDate: "2023-06-18",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const habits = [
     repeat: "hourly",
     goal: "7 glasses",
     time: "all day",
-    startDate: "18-06-2023",
+    startDate: "2023-06-18",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const habits = [
     repeat: "weekly",
     goal: "2 hours",
     time: "afternoon",
-    startDate: "18-06-2023",
+    startDate: "2023-06-18",
   },
   {
     id: 6,
@@ -45,6 +45,6 @@ export const habits = [
     repeat: "monthly",
     goal: "10 times",
     time: "any time",
-    startDate: "18-06-2023",
+    startDate: "2023-06-18",
   }
 ];
