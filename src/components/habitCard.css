@@ -10,3 +10,7 @@ li {
     background-color: lightblue;
     padding: 40px;
 }
+
+.habit-card h3 {
+    cursor: pointer;
+}

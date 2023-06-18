@@ -1,8 +1,11 @@
 import React, { useContext, useState } from "react";
 import { HabitContext } from "../contexts/habitContext";
+import "./habitForm.css";
 
 const HabitForm = () => {
-  const { habitState } = useContext(HabitContext);
+  const { habitState, addHabit } = useContext(HabitContext);
+
+  const {setIsAdd, setIsEdit} = useContext(HabitContext);
 
   const [habitDetails, setHabitDetails] = useState({
     id: Math.random() * 100,
@@ -35,9 +38,16 @@ const HabitForm = () => {
     setHabitDetails({ ...habitDetails, [e.target.name]: e.target.value });
   };
 
+  const saveHandler = (e) => {
+    e.preventDefault();
+    addHabit(habitDetails);
+    setIsAdd(false);
+    setIsEdit(false);
+  }
+
   return (
-    <div>
-      <form>
+    <div className="modal">
+      <form onSubmit={saveHandler}>
         <input
           name="name"
           type="text"
@@ -98,7 +108,10 @@ const HabitForm = () => {
           value={habitDetails.startDate}
           onChange={inputChangeHandler}
         />
-        <button type="button">Discard</button>
+        <button type="button" onClick={() => {
+          setIsAdd(false);
+          setIsEdit(false);
+        }}>Discard</button>
         <button type="submit">Save</button>
       </form>
     </div>
