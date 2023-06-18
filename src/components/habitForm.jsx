@@ -40,12 +40,11 @@ const HabitForm = ({habitData}) => {
 
   const saveHandler = (e) => {
     e.preventDefault();
+    addHabit(habitDetails);
+      setIsAdd(false);
     if(habitData) {
       editHabit(habitDetails.id, habitDetails);
       setIsEdit(false);
-    }else {
-      addHabit(habitDetails);
-      setIsAdd(false);
     }
   }
 
