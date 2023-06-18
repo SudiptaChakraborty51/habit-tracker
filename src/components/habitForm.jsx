@@ -2,18 +2,18 @@ import React, { useContext, useState } from "react";
 import { HabitContext } from "../contexts/habitContext";
 import "./habitForm.css";
 
-const HabitForm = () => {
+const HabitForm = ({habitData}) => {
   const { habitState, addHabit } = useContext(HabitContext);
 
-  const {setIsAdd, setIsEdit} = useContext(HabitContext);
+  const {setIsAdd, setIsEdit, editHabit} = useContext(HabitContext);
 
   const [habitDetails, setHabitDetails] = useState({
-    id: Math.random() * 100,
-    name: "",
-    repeat: "",
-    goal: "",
-    time: "",
-    startDate: "",
+    id: habitData?.id ?? Math.random() * 100,
+    name: habitData?.name ?? "",
+    repeat: habitData?.repeat??"",
+    goal: habitData?.goal ?? "",
+    time: habitData?.time ?? "",
+    startDate: habitData?.startDate ?? "",
   });
 
   const repeatArr = habitState?.habitsData.reduce(
@@ -40,9 +40,13 @@ const HabitForm = () => {
 
   const saveHandler = (e) => {
     e.preventDefault();
-    addHabit(habitDetails);
-    setIsAdd(false);
-    setIsEdit(false);
+    if(habitData) {
+      editHabit(habitDetails.id, habitDetails);
+      setIsEdit(false);
+    }else {
+      addHabit(habitDetails);
+      setIsAdd(false);
+    }
   }
 
   return (

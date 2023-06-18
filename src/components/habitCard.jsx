@@ -13,12 +13,6 @@ const HabitCard = ({ habitData}) => {
   return (
     <li className="habit-card">
       <h3 onClick={() => navigate(`/habit/${habitData.id}`)}>{habitData.name}</h3>
-      <i class="fa-solid fa-pen-to-square" onClick={() => {
-        setIsEdit(true);
-      }}></i>
-      {
-        isEdit && <HabitForm />
-      }
       <i class="fa-solid fa-trash" onClick={() => deleteHabit(habitData.id)}></i>
       <i class="fa-solid fa-box-archive" onClick={() => toggleArchiveHabit(habitData.id)}></i>
     </li>
