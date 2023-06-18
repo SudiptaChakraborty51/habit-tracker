@@ -1,0 +1,50 @@
+export const habits = [
+  {
+    id: 1,
+    name: "Meditate",
+    repeat: "daily",
+    goal: "30 minutes",
+    time: "morning",
+    startDate: "18-06-2023",
+  },
+  {
+    id: 2,
+    name: "Hit the Gym",
+    repeat: "daily",
+    goal: "1 hour",
+    time: "evening",
+    startDate: "18-06-2023",
+  },
+  {
+    id: 3,
+    name: "Read Books",
+    repeat: "daily",
+    goal: "2 chapters",
+    time: "morning",
+    startDate: "18-06-2023",
+  },
+  {
+    id: 4,
+    name: "Drink water",
+    repeat: "hourly",
+    goal: "7 glasses",
+    time: "all day",
+    startDate: "18-06-2023",
+  },
+  {
+    id: 5,
+    name: "Singing",
+    repeat: "weekly",
+    goal: "2 hours",
+    time: "afternoon",
+    startDate: "18-06-2023",
+  },
+  {
+    id: 6,
+    name: "Donating NGO",
+    repeat: "monthly",
+    goal: "10 times",
+    time: "any time",
+    startDate: "18-06-2023",
+  }
+];

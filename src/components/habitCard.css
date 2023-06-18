@@ -1,0 +1,12 @@
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 2rem;
+}
+
+li {
+    border-radius: 10px;
+    background-color: lightblue;
+    padding: 40px;
+}
